@@ -1,0 +1,20 @@
+development: &defaults
+  adapter: postgresql
+  encoding: unicode
+  database: ruby_development
+  pool: 5
+  username: enbake
+  password: admin
+  host: localhost
+
+test:
+  <<: *defaults
+  database: ruby_test
+
+staging:
+  <<: *defaults
+  database: ruby_core
+
+production:
+  <<: *defaults
+  database: ruby_production
